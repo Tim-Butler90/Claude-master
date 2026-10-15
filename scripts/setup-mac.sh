@@ -109,8 +109,8 @@ fi
 say "7. Connect to Claude" "Registers MCP servers with the 'claude' command. Only tools that really speak MCP are wired."
 if have claude; then
   cp -n "$HOME/.claude.json" "$HOME/.claude.json.backup-before-setup" 2>/dev/null
-  claude mcp add --scope user browser-use -- "$VENV/bin/python" -m browser_use.mcp.server 2>/dev/null \
-    && ok "MCP: browser-use" || bad "MCP: browser-use (module path may differ; run: $VENV/bin/browser-use --help)"
+  claude mcp add --scope user browser-use -- uvx --from "browser-use[cli]" browser-use --mcp \
+    && ok "MCP: browser-use" || bad "MCP: browser-use"
   "$VENV/bin/headroom" mcp install && ok "MCP: headroom" || bad "MCP: headroom"
   claude mcp list
 else
