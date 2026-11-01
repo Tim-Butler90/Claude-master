@@ -6,9 +6,13 @@ Source of truth: `DESIGN.md` (values and rationale), `getdesign.md` (token map),
 Never hard-code colors, spacing, radii or font sizes in components. Use the theme variables.
 After changing tokens, run `npm run check:tokens`.
 
+## Routing
+At the start of a task, consult `.claude/skills/situation-router/SKILL.md` to pick the right skill, plugin or MCP.
+
 ## Commands
 - `npm run build` builds CSS and JS to `dist/`
 - `npm run demo` builds and serves the Button demo at http://localhost:4173/index.html
+- `npm run build:themes` regenerates `src/themes/` from the reference library
 - `npm run check:tokens` verifies `DESIGN.md` and `src/index.css` agree
 
 ## Skills

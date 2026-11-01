@@ -19,3 +19,11 @@ To scan any third-party skill before trusting it: `skillspector scan .claude/ski
 | Token drift check | `scripts/check-tokens.mjs` (`npm run check:tokens`) | Compares `DESIGN.md` tokens with `src/index.css` |
 
 Still not installed here (the auto-mode classifier blocked running external code): SkillSpector CLI, gstack. Run `scripts/install-gstack.sh` and `uv tool install git+https://github.com/NVIDIA/skillspector.git` yourself, or allow them.
+
+## Added in the product-machine pass
+| Item | Location |
+|---|---|
+| situation-router skill | `.claude/skills/situation-router/` |
+| Theme generator (30 themes, 5 skipped for unparsable palettes) | `scripts/make-themes.mjs`, output `src/themes/` (see `REPORT.md`) |
+| Trend radar config + run prompt | `radar/NICHES.md`, `radar/PROMPT.md`, reports in `radar/reports/` |
+| Niche skill template | `products/niche-skill-template/` |
