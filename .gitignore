@@ -59,3 +59,4 @@
 
 # npm dependencies
 /node_modules/
+/dist/
