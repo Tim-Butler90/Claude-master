@@ -56,3 +56,6 @@
 /.claude/skills/spec/
 /.claude/skills/sync-gbrain/
 /.claude/skills/unfreeze/
+
+# npm dependencies
+/node_modules/

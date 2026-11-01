@@ -1,0 +1,27 @@
+{
+  "name": "claude-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tim-Butler90/Claude-master.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tim-Butler90/Claude-master/issues"
+  },
+  "homepage": "https://github.com/Tim-Butler90/Claude-master#readme",
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.5.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.66.0",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3"
+  }
+}
