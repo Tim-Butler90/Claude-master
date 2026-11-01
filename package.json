@@ -8,7 +8,8 @@
     "build:css": "tailwindcss -i src/index.css -o dist/index.css",
     "build:js": "esbuild src/main.jsx --bundle --format=esm --outfile=dist/main.js --jsx=automatic --loader:.css=empty --define:process.env.NODE_ENV=\\\"development\\\"",
     "build": "npm run build:css && npm run build:js",
-    "demo": "npm run build && python3 -m http.server 4173"
+    "demo": "npm run build && python3 -m http.server 4173",
+    "check:tokens": "node scripts/check-tokens.mjs"
   },
   "repository": {
     "type": "git",

@@ -10,3 +10,12 @@
 | bradautomates/claude-video | - | SKIPPED: `watch` already available as `anthropic-skills:watch` |
 
 To scan any third-party skill before trusting it: `skillspector scan .claude/skills/<name> --no-llm`.
+
+## Design system (project scope)
+| Item | Location | Notes |
+|---|---|---|
+| design-system skill | `.claude/skills/design-system/` | Enforces `DESIGN.md` / `getdesign.md` tokens; wired in via `CLAUDE.md` |
+| rohitg00/awesome-claude-design (MIT) | `design-reference/awesome-claude-design/` | Markdown only: 35 reference DESIGN.md files, prompts (incl. anti-slop), recipes |
+| Token drift check | `scripts/check-tokens.mjs` (`npm run check:tokens`) | Compares `DESIGN.md` tokens with `src/index.css` |
+
+Still not installed here (the auto-mode classifier blocked running external code): SkillSpector CLI, gstack. Run `scripts/install-gstack.sh` and `uv tool install git+https://github.com/NVIDIA/skillspector.git` yourself, or allow them.

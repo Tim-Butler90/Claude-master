@@ -7,7 +7,8 @@ import { cn } from "../lib/utils";
  * (color, radius, spacing, type) comes from the `.btn` rules in
  * src/index.css, which read the DESIGN.md / getdesign.md theme variables.
  *
- * - variant: "primary" | "secondary" | "ghost" | "danger"
+ * - variant: "primary" | "secondary" | "ghost" | "danger" | "unstyled"
+ *   ("unstyled" keeps behavior and accessibility but applies no visual classes)
  * - size:    "sm" | "md" | "lg"
  * - asChild: render the child element (e.g. <a>) with button styling
  * - loading: sets aria-busy and blocks activation, keeps the label
@@ -41,7 +42,7 @@ export const Button = React.forwardRef(function Button(
   return (
     <Comp
       ref={ref}
-      className={cn("btn", className)}
+      className={cn(variant !== "unstyled" && "btn", className)}
       data-variant={variant}
       data-size={size}
       // Native <button> gets `disabled`; a Slot-ed link can't, so use aria-disabled.
